@@ -27,7 +27,7 @@ st.markdown("""
 # HUGGING FACE API SETUP
 # =========================
 try:
-    HF_TOKEN = st.secrets["HF_TOKEN"]
+    HF_TOKEN = os.getenv("HF_TOKEN")
 except:
     HF_TOKEN = None
 
@@ -264,3 +264,4 @@ if "user" in st.session_state:
         else:
 
             st.info("No activity recorded yet.")
+
