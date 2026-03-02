@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 import random
 import requests
-
+import os
 # =========================
 # PAGE CONFIG
 # =========================
@@ -262,4 +262,5 @@ if "user" in st.session_state:
             st.dataframe(users_df)
             st.dataframe(logs_df)
         else:
+
             st.info("No activity recorded yet.")
